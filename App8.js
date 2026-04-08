@@ -5,7 +5,8 @@ class App8 extends Component {
   constructor(props){
     super(props);
     this.state = {
-      status: false
+      status: false,
+      color: "#FF0000"
     };
   }
 
@@ -18,7 +19,7 @@ class App8 extends Component {
           thumbColor="#FF0000"
         />
 
-        <Text style={{textAlign: 'center', fontSize: 30}}>
+        <Text style={{textAlign: 'center', fontSize: 30,}}>
           { (this.state.status) ? "Ativo" : "Inativo"}
         </Text>
       </View>
@@ -31,6 +32,11 @@ const styles = StyleSheet.create({
     flex:1,
     marginTop:50
   },
+
+  text:{
+    color: "#FF0000"
+
+  }
 });
 
 export default App8;
