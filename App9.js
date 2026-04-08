@@ -9,13 +9,20 @@ import {
   Button,
   Platform
 } from 'react-native';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
 import { Picker } from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
 
 export default class App9 extends Component {
   constructor(props) {
     super(props);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
     this.state = {
       nome: '',
       sexo: 0,
@@ -26,6 +33,7 @@ export default class App9 extends Component {
       status: false,
       valor: 0,
     };
+<<<<<<< HEAD
 
     this.createTwoButtonAlert = this.createTwoButtonAlert.bind(this);
   }
@@ -47,6 +55,23 @@ export default class App9 extends Component {
     ]);
   }
 }
+=======
+    this.createTwoButtonAlert = this.createTwoButtonAlert.bind(this);
+  }
+
+  createTwoButtonAlert() {
+    const { nome, valor, sexo, sexos, status } = this.state;
+    const sexoSelecionado = sexos[sexo]?.genero || '';
+    const estadoCivil = status ? 'Casado' : 'Solteiro';
+    const mensagem = `Nome: ${nome}\nLimite: R$ ${valor.toFixed(2)}\nSexo: ${sexoSelecionado}\nEstado Civil: ${estadoCivil}`;
+
+    if (Platform.OS === 'web') {
+      window.alert(`Conta Criada com Sucesso\n\n${mensagem}`);
+    } else {
+      Alert.alert('Conta Criada com Sucesso', mensagem, [{ text: 'OK' }]);
+    }
+  }
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
 
   render() {
     let sexoGenero = this.state.sexos.map((v, k) => {
@@ -61,14 +86,20 @@ export default class App9 extends Component {
           value={this.state.nome}
           onChangeText={nome => this.setState({ nome })}
         />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
         <Picker
           selectedValue={this.state.sexo}
           onValueChange={sexoTipo => this.setState({ sexo: sexoTipo })}
         >
           {sexoGenero}
         </Picker>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
         <Slider
           minimumValue={0}
           maximumValue={100}
@@ -79,21 +110,33 @@ export default class App9 extends Component {
           minimumTrackTintColor="#00FF00"
           maximumTrackTintColor="#FF0000"
         />
+<<<<<<< HEAD
 
         <Text style={{ textAlign: 'center', fontSize: 30 }}>
           Escolha seu Limite {this.state.valor.toFixed(1)} R$
         </Text>
 
+=======
+        <Text style={{ textAlign: 'center', fontSize: 30 }}>
+          Escolha seu Limite {this.state.valor.toFixed(1)} R$
+        </Text>
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
         <Switch
           value={this.state.status}
           onValueChange={valorSwitch => this.setState({ status: valorSwitch })}
           thumbColor="#FF0000"
         />
+<<<<<<< HEAD
 
         <Text style={{ textAlign: 'center', fontSize: 30 }}>
           {this.state.status ? 'Casado' : 'Solteiro'}
         </Text>
 
+=======
+        <Text style={{ textAlign: 'center', fontSize: 30 }}>
+          {this.state.status ? 'Casado' : 'Solteiro'}
+        </Text>
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
         <Button
           title="Criar Conta"
           onPress={this.createTwoButtonAlert}
@@ -118,4 +161,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     backgroundColor: '#fff',
   },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 5808986483bfb6e4162bc1a05fe77f7074d6710e
