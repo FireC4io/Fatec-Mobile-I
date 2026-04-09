@@ -20,7 +20,7 @@ export default function App11() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        {/* Definindo a tela "Home" */}
+        {/* Definindo a tela "Home" zada */}
         <Stack.Screen name="Home" component={HomeScreen} />
         {/* Definindo a tela "Details" */}
         <Stack.Screen name="Details" component={DetailsScreen} />
@@ -33,6 +33,7 @@ export default function App11() {
         <Stack.Screen name="App10" component={App10} />
 
       </Stack.Navigator>
+      
     </NavigationContainer>
   );
 }
