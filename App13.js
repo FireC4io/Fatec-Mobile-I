@@ -2,7 +2,13 @@ import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
 
 export default function App13() {
-
+  const  Header = () => {
+    return (
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Header App</Text>
+      </View>
+    );
+  }
   const Boxes = () => {
     return (
       <View style={styles.boxContainer}>
@@ -34,10 +40,10 @@ export default function App13() {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Header App</Text>
+      
+        <Text style={styles.headerText}></Text>
+        <Header />
         <Boxes />
-      </View>
     </SafeAreaView>
   );
 }
@@ -56,7 +62,7 @@ const styles = StyleSheet.create({
   boxContainer: {
     width: '100%',
     height: '85%',
-    backgroundColor: '#ff0000',
+    //backgroundColor: '#ff0000',
     padding: 5,
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -65,12 +71,13 @@ const styles = StyleSheet.create({
     width: '50%',
     height: '50%',
     padding: 5,
+    //backgroundColor: '#00ff00',
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
   inner: {
     flex: 1,
-    backgroundColor: '#00ff00',
+    backgroundColor: '#8c8c8c',
     justifyContent: 'center',
     alignItems: 'center',
   },
