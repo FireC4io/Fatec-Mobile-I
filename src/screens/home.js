@@ -26,16 +26,18 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 50,
     justifyContent: 'center',
   },
   title: {
-    fontSize: 26,
+    fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 40,
+    
   },
   botao: {
-    marginBottom: 16,
+    marginBottom: 10,
+    gap: 10,
+
   },
 });
